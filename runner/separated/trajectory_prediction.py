@@ -26,9 +26,9 @@ class InformerModule:
         self.output_attention = output_attention
 
     def load(self, setting):
-        model_path = os.path.join("../st_prediction/checkpoints", setting, 'checkpoint.pth')
+        model_path = os.path.join("st_prediction/checkpoints", setting, 'checkpoint.pth')
         self.model.load_state_dict(torch.load(model_path))
-        scaler_path = os.path.join("../st_prediction/checkpoints", setting, 'scaler.npz')
+        scaler_path = os.path.join("st_prediction/checkpoints", setting, 'scaler.npz')
         parameters = np.load(scaler_path, allow_pickle=True)
         self.scaler.load(mean=parameters["mean"], std=parameters["std"])
 
