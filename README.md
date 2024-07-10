@@ -29,6 +29,7 @@ Download the datasets and build the directory yourself. The simulated datasets a
    2) Note that "--model_dir1" and "--model_dir2" should be filled with the paths of the trained MAPPO and MADDPG models, respectively.
 
 # Requirements
-python 3.8  
+python 3.8.18  
 torch 1.13.1+cu116  
-tensorboard 2.14.0
+tensorboard 2.14.0  
+gym 0.26.2
