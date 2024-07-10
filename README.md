@@ -17,7 +17,7 @@ Download the datasets and build the directory yourself. The simulated datasets a
 # Model Training
 1. Download the simulated datasets and put folder "sumo" under folder "MCMA".
 2. Under directory /st_prediction:  
-   1) Run data_processing.py to generate the processed data in folder "trajectory_data".  
+   1) Run data_processing.py and generate processed data in folder "trajectory_data".  
    2) Pre-train vehicular trajectory prediction models with main_informer.py. The pre-trained prediction models are saved in folder "checkpoints".
 4. In file main.py:  
    1) Set "--stage" to "train" and run main.py to train MCMA.  
