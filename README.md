@@ -2,8 +2,7 @@
 A Mobility-Aware Cooperative Multi-Agent (MCMA) deep reinforcement learning approach for the task migration-assisted multi-edge computation offloading problem in vehicular networks.
 
 Four scenarios are simulated with Simulation of Urban MObility (SUMO) (https://sumo.dlr.de/docs/index.html), including $\mathrm{Grid}_{3\times 3}$, $\mathrm{Net}_4$, Pasubio, and A.Costa.  
-The simulated datasets are available at https://drive.google.com/drive/folders/1oXeOSBLP-BjTtyfzmWor61gPqSVROk26?usp=sharing.
-You should download the datasets and build the directory yourself.
+Download the datasets and build the directory yourself. The simulated datasets are available at https://drive.google.com/drive/folders/1oXeOSBLP-BjTtyfzmWor61gPqSVROk26?usp=sharing.
 
 # File Structure
 * /algorithms: Implementation of MAPPO and MADDPG algorithms.
@@ -25,11 +24,12 @@ You should download the datasets and build the directory yourself.
    Note that "--simulation_scenario", "--time_range", and "--num_edge" need to be modified according to different scenarios.
 
 # Model Training
-In file main.py:  
-Set "--stage" to "train" and run main.py to test MCMA.  
-Note that "--model_dir1" and "--model_dir2" should be filled with the paths of the trained MAPPO and MADDPG models, respectively.  
-Set the test episodes with "start_epi" and "end_epi".
+1. In file main.py:  
+   Set "--stage" to "train" and run main.py to test MCMA.  
+   Note that "--model_dir1" and "--model_dir2" should be filled with the paths of the trained MAPPO and MADDPG models, respectively.  
+   Set the test episodes with "start_epi" and "end_epi".
 
 # Requirements
 python 3.8  
 torch 1.13.1+cu116
+tensorboard 2.14.0
