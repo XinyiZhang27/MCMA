@@ -21,7 +21,7 @@ class EnvRunner(Runner):
         self.time_slots = 60  # 车辆移动过程中进行60个时间片(s)的任务，每个时间片一个任务
 
         # 加载server坐标
-        edge_pos_file = "../sumo/data/{}/edge_position.csv".format(self.simulation_scenario)
+        edge_pos_file = "sumo/data/{}/edge_position.csv".format(self.simulation_scenario)
         self.edge_pos = pd.read_csv(edge_pos_file)
 
         # 轨迹预测模型
@@ -37,7 +37,7 @@ class EnvRunner(Runner):
         self.TrajPredictionModel.load(setting)  # load model and scaler
 
         # 加载模拟数据 (初步使用模拟和预处理好的数据, 后续可改为实时调用的API)
-        simulation_data_file = "../sumo/data/{}/{}/simulation_sequences.pkl".format(self.simulation_scenario, self.time_range)
+        simulation_data_file = "sumo/data/{}/{}/simulation_sequences.pkl".format(self.simulation_scenario, self.time_range)
         # simulation_sequences --- key: start_time, value: one_sequence
         # one_sequence --- time_len=60长度的edge_vehicle_map --- key: edge_id, value: list of vehicle_id
         # {start_time: [{edge_0:[v_1,v_2,...., ],edge_1:[],...,edge_num:[]},{},...,time_len],...,episode}
@@ -48,12 +48,12 @@ class EnvRunner(Runner):
         print(self.sequence_keys)
 
         # 加载车辆历史轨迹数据
-        vehicle_trajectory_file = "../st_prediction/trajectory_data/{}/{}/vehicle_trajectory.pkl".format(
+        vehicle_trajectory_file = "st_prediction/trajectory_data/{}/{}/vehicle_trajectory.pkl".format(
             self.simulation_scenario, self.time_range)
         self.vehicle_trajectory = load_pkl(vehicle_trajectory_file)
 
         # 加载每个时刻系统内车辆数据
-        time_vehicle_file = "../st_prediction/trajectory_data/{}/{}/time_vehicle.pkl".format(
+        time_vehicle_file = "st_prediction/trajectory_data/{}/{}/time_vehicle.pkl".format(
             self.simulation_scenario, self.time_range)
         self.time_vehicle = load_pkl(time_vehicle_file)
 
