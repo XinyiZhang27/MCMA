@@ -31,5 +31,5 @@ In file main.py:
 
 # Requirements
 python 3.8  
-torch 1.13.1+cu116
+torch 1.13.1+cu116  
 tensorboard 2.14.0
