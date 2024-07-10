@@ -23,7 +23,7 @@ Download the datasets and build the directory yourself. The simulated datasets a
    1) Set "--stage" to "train" and run main.py to train MCMA.  
    2) Note that "--simulation_scenario", "--time_range", and "--num_edge" need to be modified according to different scenarios.
 
-# Model Training
+# Model Test
 1. file main.py:  
    1) Set "--stage" to "train" and run main.py to test MCMA.  
    2) Note that "--model_dir1" and "--model_dir2" should be filled with the paths of the trained MAPPO and MADDPG models, respectively.  
