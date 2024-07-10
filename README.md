@@ -25,9 +25,9 @@ Download the datasets and build the directory yourself. The simulated datasets a
 
 # Model Training
 In file main.py:  
-   Set "--stage" to "train" and run main.py to test MCMA.  
-   Note that "--model_dir1" and "--model_dir2" should be filled with the paths of the trained MAPPO and MADDPG models, respectively.  
-   Set the test episodes with "start_epi" and "end_epi".
+    Set "--stage" to "train" and run main.py to test MCMA.  
+    Note that "--model_dir1" and "--model_dir2" should be filled with the paths of the trained MAPPO and MADDPG models, respectively.  
+    Set the test episodes with "start_epi" and "end_epi".
 
 # Requirements
 python 3.8  
