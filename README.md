@@ -17,17 +17,17 @@ Download the datasets and build the directory yourself. The simulated datasets a
 # Model Training
 1. Download the simulated datasets and put folder "sumo" under folder "MCMA".
 2. Under directory /st_prediction:  
-   Run data_processing.py to generate the processed data in folder "trajectory_data".  
-   Pre-train vehicular trajectory prediction models with main_informer.py. The pre-trained prediction models are saved in folder "checkpoints".
+   1) Run data_processing.py to generate the processed data in folder "trajectory_data".  
+   2) Pre-train vehicular trajectory prediction models with main_informer.py. The pre-trained prediction models are saved in folder "checkpoints".
 4. In file main.py:  
-   Set "--stage" to "train" and run main.py to train MCMA.  
-   Note that "--simulation_scenario", "--time_range", and "--num_edge" need to be modified according to different scenarios.
+   1) Set "--stage" to "train" and run main.py to train MCMA.  
+   2) Note that "--simulation_scenario", "--time_range", and "--num_edge" need to be modified according to different scenarios.
 
 # Model Training
-1. file main.py:
-   Set "--stage" to "train" and run main.py to test MCMA.  
-   Note that "--model_dir1" and "--model_dir2" should be filled with the paths of the trained MAPPO and MADDPG models, respectively.  
-   Set the test episodes with "start_epi" and "end_epi".
+1. file main.py:  
+   1) Set "--stage" to "train" and run main.py to test MCMA.  
+   2) Note that "--model_dir1" and "--model_dir2" should be filled with the paths of the trained MAPPO and MADDPG models, respectively.  
+   3) Set the test episodes with "start_epi" and "end_epi".
 
 # Requirements
 python 3.8  
