@@ -37,9 +37,9 @@ def make_train_env(all_args):
 
 def parse_args(args, parser):
     # "3-3-grid"/"Net4"/"bologna_pasubio"/"bologna_acosta"
-    parser.add_argument("--simulation_scenario", type=str, default="Net4")
-    parser.add_argument("--time_range", type=str, default="24h")  # "10h"/"24h"
-    parser.add_argument("--num_edge", type=int, default=13)  # 9/13/18/16
+    parser.add_argument("--simulation_scenario", type=str, default="3-3-grid")
+    parser.add_argument("--time_range", type=str, default="10h")  # "10h"/"24h"
+    parser.add_argument("--num_edge", type=int, default=9)  # 9/13/18/16
     parser.add_argument("--stage", type=str, default="train")  # train/test
 
     all_args = parser.parse_known_args(args)[0]
@@ -67,7 +67,7 @@ def main(args):
 
     # run dir
     dir = (
-        Path(os.path.split(os.path.dirname(os.path.abspath(__file__)))[0] + "/results")
+        Path(os.path.dirname(os.path.abspath(__file__)) + "/results")
         / all_args.simulation_scenario
         / all_args.time_range
     )

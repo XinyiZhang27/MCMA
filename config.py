@@ -62,6 +62,8 @@ def get_config():
     )
 
     # #MAPPO
+    # prepare parameter
+    parser.add_argument("--algorithm_name1", type=str, default="mappo")
     # replay buffer parameters
     parser.add_argument("--buffer_length1", type=int, default=30000)
     # network parameters
@@ -259,6 +261,8 @@ def get_config():
     )
 
     # #MADDPG
+    # prepare parameter
+    parser.add_argument("--algorithm_name2", type=str, default="maddpg")
     # replay buffer parameters
     parser.add_argument(
         '--buffer_length2', type=int, default=30000, help="Max # of transitions that replay buffer can contain")
