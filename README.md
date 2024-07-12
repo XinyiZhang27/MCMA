@@ -24,7 +24,7 @@ Please download the datasets and build the directory yourself. The simulated dat
    2) Note that "--simulation_scenario", "--time_range", and "--num_edge" need to be modified according to different scenarios.
 
 # Model Test
-1. file main.py:  
+1. In file main.py:  
    1) Set "--stage" to "test" and run main.py to test MCMA. Set the test episodes with "start_epi" and "end_epi".  
    2) Note that "--model_dir1" and "--model_dir2" should be filled with the paths of the trained MAPPO and MADDPG models, respectively.
 
