@@ -55,6 +55,10 @@ class MADDPG:
         train_info['critic_grad_norm'] = critic_grad_norm
 
         # update actor
+        # freeze Q-networks
+        for p in self.policies[agent_id].critic.parameters():
+            p.requires_grad = False
+
         acts, _ = self.policies[agent_id].get_actions(obs, avail_acts, use_gumbel=True)
         actor_loss = -self.policies[agent_id].critic(share_obs, acts).mean()
 
@@ -63,6 +67,9 @@ class MADDPG:
         self.policies[agent_id].actor_optimizer.step()
 
         actor_grad_norm = torch.nn.utils.clip_grad_norm_(self.policies[agent_id].actor.parameters(), self.max_grad_norm)
+
+        for p in self.policies[agent_id].critic.parameters():
+            p.requires_grad = True
 
         train_info['actor_loss'] = actor_loss
         train_info['actor_grad_norm'] = actor_grad_norm
