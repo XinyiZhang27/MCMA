@@ -1,5 +1,5 @@
 # MCMA
-A Mobility-Aware Cooperative Multi-Agent (MCMA) deep reinforcement learning approach for the task migration-assisted multi-edge computation offloading problem in vehicular networks.
+A Mobility-Aware Cooperative Multi-Agent (MCMA) deep reinforcement learning approach for the task migration-assisted multi-edge computation offloading problem in vehicular networks.  
 <b>We're currently organizing the codes and the updated version will be available soon.</b>
 
 Four scenarios are simulated with Simulation of Urban MObility (SUMO) (https://sumo.dlr.de/docs/index.html), including $\mathrm{Grid}_{3\times 3}$, $\mathrm{Net}_4$, Pasubio, and A.Costa.  
